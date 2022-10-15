@@ -54,7 +54,7 @@ button {
   pointer-events: auto;
 }
 #header .container #gnb .list > li:hover .depth01 {
-  background-color: #3685c2;
+  background-color: #0467b3;
 }
 #header .container #gnb .list > li:hover .depth01:after {
   transform: scaleX(1);
@@ -99,7 +99,7 @@ button {
 #header .container #gnb .list > li .depth02 {
   position: absolute;
   pointer-events: none;
-  background-color: #3685c2;
+  background-color: #0467b3;
   width: 100%;
   padding: 20px 0;
   border-radius: 0 0 20px 20px;
@@ -126,7 +126,7 @@ button {
   width: 200px;
 }
 #header .container #util .util-btn:hover button {
-  background-color: #3685c2;
+  background-color: #0467b3;
   color: white;
 }
 #header .container #util .util-btn:hover ul {
@@ -156,7 +156,7 @@ button {
   width: 100%;
   color: #fff;
   position: absolute;
-  background-color: #3685c2;
+  background-color: #0467b3;
   box-sizing: border-box;
   text-transform: uppercase;
   border-radius: 10px;
