@@ -1,0 +1,207 @@
+@import "mixins";
+@import "vars";
+
+body {
+  font-family: "Noto Sans KR", "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#header {
+  height: 120px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .container {
+    width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    #logo {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px;
+      }
+    }
+    #gnb {
+      .list {
+        display: flex;
+        > li {
+          color: white;
+          position: relative;
+          &:hover {
+            .depth02 {
+              opacity: 1;
+              pointer-events: auto;
+            }
+            .depth01 {
+              background-color: $main-color;
+              &:after {
+                transform: scaleX(1);
+              }
+              &:before {
+                opacity: 1;
+              }
+            }
+          }
+          .depth01 {
+            height: 120px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $h4;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+            &:after {
+              content: " ";
+              display: block;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 10px;
+              right: 30px;
+              left: 30px;
+              transform: scaleX(0);
+              transition: all 0.25s ease;
+            }
+            &:before {
+              content: "";
+              display: block;
+              height: 2px;
+              background-color: $point-color;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              opacity: 0;
+              transition: all 0.25s ease;
+            }
+          }
+          .depth02 {
+            position: absolute;
+            pointer-events: none;
+            background-color: $main-color;
+            width: 100%;
+            padding: 20px 0;
+            border-radius: 0 0 20px 20px;
+            opacity: 0;
+            transition: all 0.25s ease;
+            li {
+              text-align: center;
+              padding: 15px 0;
+              font-size: 16px;
+              opacity: 0.6;
+              transition: all 0.25s ease;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    #util {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      .util-btn {
+        position: relative;
+        width: 200px;
+        &:hover {
+          button {
+            background-color: $main-color;
+            color: white;
+          }
+          ul {
+            opacity: 1;
+            top: 50px;
+            pointer-events: auto;
+          }
+        }
+        button {
+          width: 100%;
+          padding: 10px 0;
+          background-color: rgb(224, 224, 224);
+          text-transform: uppercase;
+          border-radius: 10px;
+          font-size: 18px;
+          transition: all 0.25s ease;
+          @include flex;
+          &:before {
+            content: "\e894";
+            font-family: "Material Icons";
+            margin-right: 20px;
+            font-size: 30px;
+          }
+        }
+
+        ul {
+          width: 100%;
+          color: #fff;
+          position: absolute;
+          background-color: $main-color;
+          box-sizing: border-box;
+          text-transform: uppercase;
+          border-radius: 10px;
+          text-align: center;
+          padding: 10px 0;
+          top: 0px;
+          opacity: 0;
+          transition: all 0.25s ease;
+          pointer-events: none;
+          li {
+            &:hover {
+              a:after {
+                transform: scaleX(1);
+                pointer-events: auto;
+              }
+            }
+          }
+          li a {
+            display: block;
+            padding: 10px 0;
+            position: relative;
+            &:after {
+              content: "";
+              display: block;
+              height: 1px;
+              background-color: #fff;
+              position: absolute;
+              bottom: 0;
+              right: 20px;
+              left: 20px;
+              transform: scaleX(0);
+              transition: all 0.25s ease;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      .material-icons {
+        margin-left: 25px;
+        font-size: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "vars";
+@import "mixins";
+
+#main-visual {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url("../images/main/bg_main_visual.jpg");
+}
