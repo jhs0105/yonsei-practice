@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/swiper-bundle.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
@@ -26,11 +27,17 @@
       src="https://kit.fontawesome.com/5f5f753b4c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/gsap/gsap.min.js"></script>
+    <script src="../js/gsap/ScrollToPlugin.min.js"></script>
+    <script src="../js/aos.js"></script>
   </head>
   <body>
     <header id="header">
       <div class="container">
-        <h1 id="logo"><img src="../images/layout/logo_w.svg" alt="" /></h1>
+        <h1 id="logo">
+          <img src="../images/layout/logo_w.svg" alt="" class="logo-white" />
+          <img src="../images/layout/logo.svg" alt="" class="logo-color" />
+        </h1>
         <nav id="gnb">
           <ul class="list">
             <li>
@@ -80,18 +87,640 @@
           </ul>
         </nav>
         <div id="util">
-          <div class="util-btn">
-            <button>Language</button>
-            <ul>
-              <li><a href="">korean</a></li>
-              <li><a href="">english</a></li>
+          <div class="btn">
+            <button class="language-btn">language</button>
+            <ul class="language-menu">
+              <li><a href="">kor</a></li>
+              <li><a href="">eng</a></li>
             </ul>
           </div>
-          <a href=""><span class="material-icons"> menu </span></a>
+          <a href=""><i class="fa-solid fa-bars"></i></a>
         </div>
       </div>
     </header>
-    <div id="main-visual"></div>
+    <!-- header end -->
+    <div id="main-visual">
+      <div class="mask">
+        <ul class="swiper-wrapper">
+          <li class="visual01 swiper-slide"></li>
+          <li class="visual02 swiper-slide"></li>
+          <li class="visual03 swiper-slide"></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="main-txt">
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            YONSEI UNIVERSITY <br />
+            COLLEGE OF SCIENCE
+          </h2>
+          <div
+            class="pagination"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          ></div>
+          <div class="info-box">
+            <div class="txt" data-aos="fade-up" data-aos-duration="2000">
+              <h3>2021학년도 이과대학 학부 우수강의 교수상 시상</h3>
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  2022년 3월 7일에 이과대학 회의실에서 학부 우수강의 교수상
+                  시상식을 진행하였습니다.
+                </li>
+                <li class="swiper-slide">
+                  2022년 3월 7일과 2022년 5월 10일에 이과대학 회의실에서 학부
+                  우수강의 교수상 시상식을 진행하였습니다.
+                </li>
+                <li class="swiper-slide">
+                  2022년 3월 7일과 2022년 3월 11일에 이과대학 회의실에서 학부
+                  우수강의 교수상 시상식을 진행하였습니다.
+                </li>
+              </ul>
+            </div>
+            <div class="notice" data-aos="fade-up" data-aos-duration="3000">
+              <div class="title">
+                <h3>notice</h3>
+                <span>자세히 보기</span>
+              </div>
+              <div class="notice-box">
+                <div class="date">
+                  <span
+                    >2022.10 <br />
+                    <strong>06</strong></span
+                  >
+                </div>
+                <div class="notice-txt">
+                  <h3>연세대학교 이과대학 홈페이지 리뉴얼 완료</h3>
+                  <p>
+                    안녕하세요 연세대학교 이과대학 홈페이지가 리뉴얼 되었습니다.
+                    안녕하세요 연세대학교 이과대학 홈페이지가 리뉴얼 되었습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main-visual end -->
+    <section id="research" class="section">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
+        <div class="txt-box">
+          <h3>
+            연세대학교 이과대학 <br />
+            <strong>연구성과</strong>
+          </h3>
+          <p>
+            연세대학교 이과대학 동문 및 교수진들의 자랑스러운 연구성과를
+            알려드립니다.
+          </p>
+          <div class="btns">
+            <button class="btn btn-prev">PREV</button>
+            <span>|</span>
+            <button class="btn btn-next">NEXT</button>
+          </div>
+          <a href="">more detail</a>
+        </div>
+        <div class="banner">
+          <div class="mask">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <div class="img-box">
+                    <img src="../images/layout/logo.svg" alt="" />
+                  </div>
+                  <div class="research-txt">
+                    <h3>2021학년도 이과대학 대학원 우수강의교수상 시상</h3>
+                    <div class="date">
+                      <span>2022.05.31</span>
+                      <span>자세히 보기</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- research end -->
+    <section id="fund" class="section">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
+        <div class="txt-box">
+          <h3>연세대학교 이과대학 <strong>발전기금</strong></h3>
+        </div>
+        <div class="fund-news">
+          <ul>
+            <li>
+              <div class="news">
+                <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                <span>2018.05.28</span>
+              </div>
+              <div class="news-box">
+                <div class="contents-box">
+                  <div class="date">
+                    <span
+                      >2021.03 <br />
+                      <strong>24</strong></span
+                    >
+                  </div>
+                  <div class="contents">
+                    <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                    <p>
+                      대기과학과 김준 교수가 2018년 5월 23일에 이과대학 발전기금
+                      5백만원을 기탁했다.
+                    </p>
+                  </div>
+                </div>
+                <img src="../images/main/fund_thumbnail_img3.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="news">
+                <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                <span>2018.05.28</span>
+              </div>
+              <div class="news-box">
+                <div class="contents-box">
+                  <div class="date">
+                    <span
+                      >2021.03 <br />
+                      <strong>24</strong></span
+                    >
+                  </div>
+                  <div class="contents">
+                    <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                    <p>
+                      대기과학과 김준 교수가 2018년 5월 23일에 이과대학 발전기금
+                      5백만원을 기탁했다.
+                    </p>
+                  </div>
+                </div>
+                <img src="../images/main/fund_thumbnail_img3.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="news">
+                <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                <span>2018.05.28</span>
+              </div>
+              <div class="news-box">
+                <div class="contents-box">
+                  <div class="date">
+                    <span
+                      >2021.03 <br />
+                      <strong>24</strong></span
+                    >
+                  </div>
+                  <div class="contents">
+                    <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                    <p>
+                      대기과학과 김준 교수가 2018년 5월 23일에 이과대학 발전기금
+                      5백만원을 기탁했다.
+                    </p>
+                  </div>
+                </div>
+                <img src="../images/main/fund_thumbnail_img3.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <div class="news">
+                <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                <span>2018.05.28</span>
+              </div>
+              <div class="news-box">
+                <div class="contents-box">
+                  <div class="date">
+                    <span
+                      >2021.03 <br />
+                      <strong>24</strong></span
+                    >
+                  </div>
+                  <div class="contents">
+                    <h3>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</h3>
+                    <p>
+                      대기과학과 김준 교수가 2018년 5월 23일에 이과대학 발전기금
+                      5백만원을 기탁했다.
+                    </p>
+                  </div>
+                </div>
+                <img src="../images/main/fund_thumbnail_img3.jpg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- fund end -->
+    <section id="about">
+      <div class="container">
+        <div class="contents" data-aos="fade-right" data-aos-duration="2000">
+          <span>since 1915</span>
+          <h2>
+            YONSEI UNIVERSITY <br />
+            COLLEGE OF SCIENCE
+          </h2>
+          <p>
+            지난 100년간 세계적인 대학으로 발전해 온 <br />
+            대한민국 과학 교육과 연구의 산실
+          </p>
+        </div>
+        <div class="about-box" data-aos="fade-left" data-aos-duration="2000">
+          <ul>
+            <li>
+              <a href=""
+                >조직 및 <br />
+                행정 안내</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >학생회 및 <br />
+                동아리</a
+              >
+            </li>
+            <li>
+              <a href=""
+                >과학콘서트 및 <br />
+                대중강연</a
+              >
+            </li>
+            <li><a href="">장학금 정보</a></li>
+            <li><a href="">입학안내</a></li>
+            <li><a href="">오시는 길</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- about end -->
+    <section id="department" class="section">
+      <div class="container">
+        <div class="txt-box" data-aos="fade-up" data-aos-duration="1500">
+          <h3>연세대학교 이과대학 <strong>학부 & 대학원</strong></h3>
+          <p>
+            대한민국 과학 교육과 연구를 선도하는 세계 자연과학을 이끌어 가는
+            인재교육의 산실
+          </p>
+        </div>
+        <div class="department-box">
+          <div class="honours" data-aos="fade-right" data-aos-duration="2000">
+            <div class="info">
+              <h3>학부</h3>
+              <a href=""><span>자세히보기</span></a>
+            </div>
+            <div class="part">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>수학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>물리학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>화학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>지구시스템과학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>천문우주학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>대기과학과</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="honours" data-aos="fade-left" data-aos-duration="2000">
+            <div class="info">
+              <h3>대학원</h3>
+              <a href=""><span>자세히보기</span></a>
+            </div>
+            <div class="part">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>수학계산학부</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>물리학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>화학과</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>지구천문대기학부</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>광과학공학 협동과정</h4>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="../images/main/venn-diagram.png" alt="" />
+                    <h4>수학과</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- department end -->
+    <section id="bk21" class="section">
+      <div class="container">
+        <div class="txt-box" data-aos="fade-right" data-aos-duration="2000">
+          <h3>
+            연세대학교 이과대학 <br />
+            <strong>BK21+교육연구단</strong>
+          </h3>
+          <p>
+            세계적 수준의 대학원 육성과 우수한 연구인력 양성을 위한 <br />
+            연세대학교 이과대학의 끊임없는 노력
+          </p>
+          <div class="control">
+            <div class="fraction-pagination"><span>01</span> / 04</div>
+            <div class="pagination"></div>
+            <div class="btns">
+              <button class="btn btn-prev"></button>
+              <button class="btn btn-next"></button>
+            </div>
+          </div>
+          <a href="">more detail</a>
+        </div>
+        <div class="bk21-banner">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="../images/main/main_community_img1.png" alt="" />
+            </li>
+            <li class="swiper-slide">
+              <img src="../images/main/main_community_img2.png" alt="" />
+            </li>
+            <li class="swiper-slide">
+              <img src="../images/main/main_community_img3.png" alt="" />
+            </li>
+            <li class="swiper-slide">
+              <img src="../images/main/main_community_img4.png" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="bk21-list" data-aos="fade-left" data-aos-duration="2000">
+          <ul>
+            <li><a href="">01.연세 수리과학 및 계산 교육연구단</a></li>
+            <li><a href="">02.연세 물리 교육연구단</a></li>
+            <li><a href="">03.지속가능 화학 교육연구단</a></li>
+            <li><a href="">04.지구 · 대기 · 천문 교육연구단</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- bk21 end -->
+    <footer id="footer">
+      <div class="container">
+        <div class="address-box">
+          <div class="address">
+            <img src="../images/layout/logo_w.svg" alt="" />
+            <address>
+              서울특별시 서대문구 연세로 50 연세대학교 이과대학 (03722) <br />
+              <span>TEL.</span> 02-2123-2552~2556
+              <span class="fax">FAX. </span>02-2123-8640
+            </address>
+          </div>
+          <div class="family-site">
+            <button>family site</button>
+            <ul>
+              <li><a href="">연세대학교</a></li>
+              <li><a href="">수학과</a></li>
+              <li><a href="">물리학과</a></li>
+              <li><a href="">화학과</a></li>
+              <li><a href="">지구시스템과학과</a></li>
+              <li><a href="">천문우주학과</a></li>
+              <li><a href="">대기과학과</a></li>
+              <li><a href="">자연과학연구원</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="info">
+          <ul>
+            <li><a href="">법적고지</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+          </ul>
+          <p class="copyright">
+            Copyright © 2022 YONSEI UNIVERSITY College of Science. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <div class="TOPbtn">
+      <button><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
   </body>
-  <script></script>
+  <script>
+    AOS.init();
+    const mainswiper = new Swiper("#main-visual .mask", {
+      effect: "fade",
+      loop: true,
+      pagination: {
+        el: "#main-visual .pagination",
+        clickable: true,
+      },
+    });
+
+    const reswiper = new Swiper("#research .mask", {
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      navigation: {
+        prevEl: "#research .btn-prev",
+        nextEl: "#research .btn-next",
+      },
+    });
+    const txtswiper = new Swiper("#main-visual .txt", {
+      effect: "fade",
+      loop: true,
+      pagination: {
+        el: "#main-visual .pagination",
+        clickable: true,
+      },
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+
+    const list = document.querySelectorAll("#bk21 .bk21-list li");
+    const listTotal = list.length;
+    const fraction = document.querySelector("#bk21 .fraction-pagination span");
+    const bk21swiper = new Swiper("#bk21 .bk21-banner", {
+      loop: true,
+      navigation: {
+        prevEl: "#bk21 .btn-prev",
+        nextEl: "#bk21 .btn-next",
+      },
+      pagination: {
+        el: "#bk21 .pagination",
+        clickable: true,
+      },
+
+      on: {
+        slideChange: function (swiper) {
+          for (let i = 0; i < listTotal; i++) {
+            if (swiper.realIndex === i) {
+              list[i].classList.add("on");
+            } else {
+              list[i].classList.remove("on");
+            }
+            fraction.textContent = "0" + (swiper.realIndex + 1);
+          }
+        },
+      },
+    });
+
+    document
+      .querySelector("#util .btn button")
+      .addEventListener("click", function () {
+        document.querySelector("#util .btn").classList.toggle("on");
+      });
+
+    const header = document.querySelector("#header");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        header.classList.add("on");
+      } else {
+        header.classList.remove("on");
+      }
+
+      if (window.scrollY > 500) {
+        TOPbtn.classList.add("on");
+      } else {
+        TOPbtn.classList.remove("on");
+      }
+    });
+
+    const fundNews = document.querySelectorAll("#fund .fund-news li");
+    const total = fundNews.length;
+
+    for (let i = 0; i < total; i++) {
+      fundNews[i].addEventListener("click", function () {
+        for (let j = 0; j < total; j++) {
+          fundNews[j].classList.remove("on");
+        }
+
+        fundNews[i].classList.add("on");
+      });
+    }
+
+    const familyBtn = document.querySelector("#footer .family-site button");
+
+    familyBtn.addEventListener("click", function () {
+      document.querySelector("#footer .family-site ul").classList.toggle("on");
+    });
+
+    const TOPbtn = document.querySelector(".TOPbtn");
+    TOPbtn.addEventListener("click", function () {
+      gsap.to(window, { scrollTo: 0, duraiton: 2 });
+    });
+  </script>
 </html>
